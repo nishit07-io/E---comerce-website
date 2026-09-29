@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f6f2">
+  <meta name="description" content="Meet Studio One: immersive wireless sound, considered down to the last detail.">
+  <title>Studio One Wireless Headphones | Form Audio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #20231f;
+      --muted: #777b72;
+      --paper: #f6f6f2;
+      --line: #dedfd8;
+      --green: #315d42;
+      --lime: #d9f36a;
+      --white: #fff;
+      font-family: "DM Sans", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: var(--paper); }
+    button, a { color: inherit; font: inherit; }
+    button { cursor: pointer; }
+    a { text-decoration: none; }
+    .announcement { padding: 9px 20px; color: #f8f8f1; background: var(--green); text-align: center; font-size: 11px; letter-spacing: .08em; }
+    .site-header { height: 72px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 0 6.1%; border-bottom: 1px solid var(--line); }
+    .wordmark { font: 700 23px/1 "Space Grotesk", sans-serif; letter-spacing: .04em; }
+    .wordmark span { color: var(--green); }
+    .nav-links { display: flex; gap: 33px; align-items: center; font-size: 13px; }
+    .nav-links a { transition: color .18s ease; }
+    .nav-links a:hover, .bag-button:hover { color: var(--green); }
+    .bag-button { justify-self: end; border: 0; padding: 9px 0 9px 12px; background: transparent; font-size: 13px; }
+    .bag-count { display: inline-grid; width: 20px; height: 20px; margin-left: 5px; place-items: center; border-radius: 50%; color: var(--ink); background: var(--lime); font-size: 11px; }
+    main { max-width: 1440px; margin: 0 auto; padding: 25px 6.1% 92px; }
+    .breadcrumbs { display: flex; gap: 10px; margin-bottom: 25px; color: var(--muted); font-size: 11px; }
+    .breadcrumbs span:last-child { color: var(--ink); }
+    .product-layout { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(350px, .88fr); gap: clamp(42px, 7.5vw, 112px); align-items: start; }
+    .gallery { min-width: 0; }
+    .hero-image { position: relative; display: grid; min-height: 570px; aspect-ratio: 1.08; overflow: hidden; place-items: center; background: #e8e8df; }
+    .hero-image img { width: 100%; height: 100%; object-fit: cover; animation: reveal .4s ease both; }
+    .image-tag { position: absolute; top: 18px; left: 18px; padding: 8px 11px; background: var(--lime); font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .image-count { position: absolute; right: 16px; bottom: 15px; padding: 7px 9px; color: var(--white); background: rgb(32 35 31 / 72%); font-size: 11px; }
+    .thumbnails { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 11px; }
+    .thumbnail { position: relative; padding: 0; aspect-ratio: 1.3; overflow: hidden; border: 1px solid transparent; background: #e8e8df; }
+    .thumbnail[aria-pressed="true"] { border-color: var(--green); }
+    .thumbnail img { width: 100%; height: 100%; object-fit: cover; transition: transform .25s ease; }
+    .thumbnail:hover img { transform: scale(1.04); }
+    .details { padding-top: 9px; }
+    .eyebrow { margin: 0 0 13px; color: var(--green); font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+    h1 { margin: 0; font: 600 clamp(36px, 4.1vw, 55px)/1.03 "Space Grotesk", sans-serif; letter-spacing: -.045em; }
+    .review-line { display: flex; gap: 9px; align-items: center; margin-top: 16px; font-size: 12px; }
+    .stars { color: #b85c30; letter-spacing: .11em; }
+    .review-link { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
+    .price-row { display: flex; gap: 12px; align-items: center; margin-top: 23px; }
+    .price { font: 600 22px "Space Grotesk", sans-serif; }
+    .old-price { color: var(--muted); font-size: 14px; text-decoration: line-through; }
+    .sale-note { padding: 5px 8px; color: #315d42; background: #e4eddd; font-size: 10px; font-weight: 700; text-transform: uppercase; }
+    .description { max-width: 490px; margin: 19px 0 26px; color: #60645c; font-size: 14px; line-height: 1.75; }
+    .rule { height: 1px; border: 0; margin: 23px 0; background: var(--line); }
+    .option-heading { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; font-size: 12px; }
+    .option-heading strong { font-weight: 600; }
+    .option-heading span { color: var(--muted); }
+    .swatches { display: flex; gap: 10px; }
+    .swatch { width: 27px; height: 27px; padding: 3px; border: 1px solid transparent; border-radius: 50%; background: transparent; }
+    .swatch[aria-pressed="true"] { border-color: var(--ink); }
+    .swatch::after { display: block; width: 100%; height: 100%; border: 1px solid rgb(0 0 0 / 12%); border-radius: inherit; background: var(--swatch); content: ""; }
+    .purchase-row { display: grid; grid-template-columns: 116px 1fr; gap: 10px; margin-top: 22px; }
+    .quantity { display: grid; grid-template-columns: 36px 1fr 36px; align-items: center; border: 1px solid #cfd1c8; }
+    .quantity button { height: 48px; border: 0; background: transparent; font-size: 18px; }
+    .quantity output { text-align: center; font-size: 13px; }
+    .add-button { display: flex; min-height: 50px; justify-content: center; align-items: center; gap: 10px; border: 1px solid var(--green); color: var(--white); background: var(--green); font-size: 13px; font-weight: 600; transition: color .2s ease, background .2s ease; }
+    .add-button:hover { color: var(--green); background: transparent; }
+    .add-button:disabled { opacity: .75; cursor: default; }
+    .delivery { margin: 13px 0 0; color: var(--muted); text-align: center; font-size: 11px; }
+    .perks { display: grid; grid-template-columns: 1fr 1fr; gap: 13px 18px; margin-top: 25px; padding-top: 21px; border-top: 1px solid var(--line); }
+    .perk { display: flex; gap: 9px; align-items: center; font-size: 11px; }
+    .perk svg { flex: 0 0 auto; width: 16px; height: 16px; color: var(--green); }
+    .accordion { margin-top: 24px; border-top: 1px solid var(--line); }
+    .accordion details { border-bottom: 1px solid var(--line); }
+    .accordion summary { display: flex; justify-content: space-between; padding: 16px 0; cursor: pointer; list-style: none; font-size: 12px; font-weight: 600; }
+    .accordion summary::-webkit-details-marker { display: none; }
+    .accordion summary::after { content: "+"; font-size: 17px; font-weight: 400; }
+    .accordion details[open] summary::after { content: "−"; }
+    .accordion details p { margin: -3px 0 16px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+    .story { display: grid; grid-template-columns: 1fr 1fr; gap: 45px; align-items: center; margin-top: 100px; padding: 43px; background: #e8e8df; }
+    .story img { display: block; width: 100%; aspect-ratio: 1.5; object-fit: cover; }
+    .story-copy { max-width: 390px; }
+    .story-copy h2 { margin: 0 0 14px; font: 600 32px/1.1 "Space Grotesk", sans-serif; letter-spacing: -.03em; }
+    .story-copy p:last-child { color: #60645c; font-size: 13px; line-height: 1.8; }
+    .footer { display: flex; justify-content: space-between; gap: 20px; padding: 24px 6.1%; color: #e9eae4; background: #20231f; font-size: 11px; }
+    .footer a { text-decoration: underline; text-underline-offset: 3px; }
+    .toast { position: fixed; right: 22px; bottom: 22px; z-index: 2; max-width: min(360px, calc(100vw - 44px)); padding: 14px 18px; color: white; background: var(--ink); font-size: 13px; opacity: 0; transform: translateY(10px); pointer-events: none; transition: opacity .2s ease, transform .2s ease; }
+    .toast.visible { opacity: 1; transform: translateY(0); }
+    @keyframes reveal { from { opacity: .55; } to { opacity: 1; } }
+    @media (max-width: 850px) {
+      .site-header { padding-right: 4%; padding-left: 4%; }
+      main { padding-right: 4%; padding-left: 4%; }
+      .product-layout { grid-template-columns: minmax(0, 1fr) minmax(310px, .9fr); gap: 35px; }
+      .hero-image { min-height: 400px; }
+      .story { padding: 28px; gap: 28px; }
+    }
+    @media (max-width: 650px) {
+      .announcement { font-size: 10px; }
+      .site-header { height: 62px; grid-template-columns: 1fr auto; }
+      .nav-links { display: none; }
+      .wordmark { font-size: 21px; }
+      main { padding-top: 18px; padding-bottom: 56px; }
+      .breadcrumbs { margin-bottom: 17px; }
+      .product-layout { grid-template-columns: 1fr; gap: 26px; }
+      .hero-image { min-height: 0; aspect-ratio: 1.05; }
+      .details { padding-top: 0; }
+      h1 { font-size: 42px; }
+      .description { margin-bottom: 21px; }
+      .story { grid-template-columns: 1fr; gap: 23px; margin-top: 58px; padding: 20px; }
+      .story-copy h2 { font-size: 28px; }
+      .footer { padding-right: 4%; padding-left: 4%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="announcement">COMPLIMENTARY SHIPPING ON ORDERS OVER $100</div>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Form Audio home">FORM<span>.</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#sound">Headphones</a>
+      <a href="#sound">Our approach</a>
+      <a href="#footer">Support</a>
+    </nav>
+    <button class="bag-button" type="button" aria-label="Shopping bag, 0 items">Bag <span class="bag-count" aria-live="polite">0</span></button>
+  </header>
+
+  <main id="top">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="#top">Home</a><span>/</span><a href="#top">Audio</a><span>/</span><span>Studio One</span>
+    </nav>
+
+    <section class="product-layout" aria-labelledby="product-title">
+      <div class="gallery">
+        <div class="hero-image">
+          <img id="main-image" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Studio One over-ear wireless headphones in warm yellow and black">
+          <span class="image-tag">Just landed</span>
+          <span class="image-count" id="image-count">01 / 04</span>
+        </div>
+        <div class="thumbnails" role="group" aria-label="Product photos">
+          <button class="thumbnail" type="button" aria-label="View front view" aria-pressed="true" data-index="1" data-src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" data-alt="Studio One over-ear wireless headphones in warm yellow and black"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&amp;fit=crop&amp;w=260&amp;q=75" alt=""></button>
+          <button class="thumbnail" type="button" aria-label="View headphones detail" aria-pressed="false" data-index="2" data-src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" data-alt="Close-up detail of padded over-ear headphones"><img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&amp;fit=crop&amp;w=260&amp;q=75" alt=""></button>
+          <button class="thumbnail" type="button" aria-label="View headphones in use" aria-pressed="false" data-index="3" data-src="https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" data-alt="Wireless headphones shown from the side"><img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&amp;fit=crop&amp;w=260&amp;q=75" alt=""></button>
+          <button class="thumbnail" type="button" aria-label="View studio listening setup" aria-pressed="false" data-index="4" data-src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&amp;fit=crop&amp;crop=entropy&amp;w=1200&amp;q=85" data-alt="Studio One headphones, ready for your next listening session"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&amp;fit=crop&amp;crop=entropy&amp;w=260&amp;q=75" alt=""></button>
+        </div>
+      </div>
+
+      <div class="details">
+        <p class="eyebrow">Form Audio · Wireless collection</p>
+        <h1 id="product-title">Studio One<br>Wireless</h1>
+        <div class="review-line"><span class="stars" aria-label="5 out of 5 stars">★★★★★</span><span>4.9</span><a class="review-link" href="#reviews">(128 reviews)</a></div>
+        <div class="price-row"><span class="price">$189.00</span><span class="old-price">$229.00</span><span class="sale-note">Save $40</span></div>
+        <p class="description">Your own room inside the noise. Studio One pairs rich, detailed sound with all-day comfort and adaptive noise cancelling that lets you choose what gets through.</p>
+
+        <hr class="rule">
+        <div class="option-heading"><strong>Color</strong><span id="color-name">Saffron / Onyx</span></div>
+        <div class="swatches" role="group" aria-label="Choose a color">
+          <button class="swatch" type="button" aria-label="Saffron and Onyx" aria-pressed="true" style="--swatch: #d6a818"></button>
+          <button class="swatch" type="button" aria-label="Forest and Moss" aria-pressed="false" style="--swatch: #49614d"></button>
+          <button class="swatch" type="button" aria-label="Cloud and Chalk" aria-pressed="false" style="--swatch: #d8d8d1"></button>
+          <button class="swatch" type="button" aria-label="Ink and Graphite" aria-pressed="false" style="--swatch: #333634"></button>
+        </div>
+
+        <div class="purchase-row">
+          <div class="quantity" aria-label="Quantity">
+            <button type="button" id="decrease" aria-label="Decrease quantity">−</button>
+            <output id="quantity" aria-live="polite">1</output>
+            <button type="button" id="increase" aria-label="Increase quantity">+</button>
+          </div>
+          <button class="add-button" id="add-to-bag" type="button">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 8h14l1 13H4L5 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 9V6a3 3 0 0 1 6 0v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            Add to bag · $189
+          </button>
+        </div>
+        <p class="delivery">Free shipping · 30-day listening trial · Easy returns</p>
+
+        <div class="perks">
+          <div class="perk"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 19 6v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3Z" stroke="currentColor" stroke-width="1.6"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>2-year warranty</div>
+          <div class="perk"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 7h11v11H3zM14 11h4l3 3v4h-7" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="7.5" cy="18" r="1.5" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="18" r="1.5" stroke="currentColor" stroke-width="1.6"/></svg>Ships in 1–2 days</div>
+        </div>
+
+        <div class="accordion">
+          <details open><summary>Sound, without the noise</summary><p>Adaptive active noise cancelling, 40 mm custom drivers, and a transparency mode that brings the room back when you need it.</p></details>
+          <details><summary>Made for the long listen</summary><p>Soft memory-foam cushions, a lightweight frame, and up to 50 hours of listening on one charge.</p></details>
+          <details><summary>What's in the box</summary><p>Studio One headphones, USB-C charging cable, 3.5 mm audio cable, and a protective travel case.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="story" id="sound" aria-labelledby="story-title">
+      <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="A sound engineer working at a mixing desk in a recording studio" loading="lazy">
+      <div class="story-copy">
+        <p class="eyebrow">A little more feeling</p>
+        <h2 id="story-title">Hear the details you came for.</h2>
+        <p>We tuned Studio One with the people who make the music. The result is a wide, natural soundstage that gives every track room to breathe, from the first note to the last.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer"><span>© 2026 Form Audio</span><a href="mailto:hello@formaudio.example">Questions? Get in touch</a></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const mainImage = document.querySelector("#main-image");
+    const imageCount = document.querySelector("#image-count");
+    const thumbnails = [...document.querySelectorAll(".thumbnail")];
+    const quantityOutput = document.querySelector("#quantity");
+    const addButton = document.querySelector("#add-to-bag");
+    const bagCount = document.querySelector(".bag-count");
+    const bagButton = document.querySelector(".bag-button");
+    const toast = document.querySelector("#toast");
+    let quantity = 1;
+    let bagItems = 0;
+    let toastTimer;
+
+    thumbnails.forEach((thumbnail) => {
+      thumbnail.addEventListener("click", () => {
+        mainImage.src = thumbnail.dataset.src;
+        mainImage.alt = thumbnail.dataset.alt;
+        imageCount.textContent = `${String(thumbnail.dataset.index).padStart(2, "0")} / 04`;
+        thumbnails.forEach((item) => item.setAttribute("aria-pressed", String(item === thumbnail)));
+      });
+    });
+
+    document.querySelectorAll(".swatch").forEach((swatch) => {
+      swatch.addEventListener("click", () => {
+        document.querySelectorAll(".swatch").forEach((item) => item.setAttribute("aria-pressed", String(item === swatch)));
+        document.querySelector("#color-name").textContent = swatch.getAttribute("aria-label").replace(" and ", " / ");
+      });
+    });
+
+    document.querySelector("#decrease").addEventListener("click", () => {
+      quantity = Math.max(1, quantity - 1);
+      quantityOutput.value = quantity;
+      quantityOutput.textContent = quantity;
+    });
+
+    document.querySelector("#increase").addEventListener("click", () => {
+      quantity = Math.min(10, quantity + 1);
+      quantityOutput.value = quantity;
+      quantityOutput.textContent = quantity;
+    });
+
+    addButton.addEventListener("click", () => {
+      bagItems += quantity;
+      bagCount.textContent = bagItems;
+      bagButton.setAttribute("aria-label", `Shopping bag, ${bagItems} ${bagItems === 1 ? "item" : "items"}`);
+      toast.textContent = `${quantity} ${quantity === 1 ? "pair" : "pairs"} added to your bag`;
+      toast.classList.add("visible");
+      window.clearTimeout(toastTimer);
+      toastTimer = window.setTimeout(() => toast.classList.remove("visible"), 2600);
+    });
+  </script>
+</body>
+</html>
